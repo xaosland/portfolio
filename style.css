@@ -1,0 +1,212 @@
+﻿*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    min-height: 100dvh;
+}
+
+.grid-container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* создает две колонки одинакового размера */
+    grid-template-rows: auto auto auto; /* создает три строки с автоматической высотой */
+    grid-column-gap: 10px; /* отступ между колонками */
+    grid-row-gap: 10px; /* отступ между строками */
+    width: 100%;
+}
+
+.grid-item {
+    box-shadow: 5px 5px 5px rgba(5, 5, 5, 0.5);
+
+}
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item1 {
+
+}
+
+.item2 {
+    grid-column: 2; /* расположен во второй колонке */
+    grid-row: 1; /* расположен в первой строке */
+}
+
+.item3 {
+    grid-column: 1; /* расположен в первой колонке */
+    grid-row: 2; /* расположен во второй строке */
+}
+
+.item4 {
+    grid-column: 2; /* расположен во второй колонке */
+    grid-row: 2; /* расположен во второй строке */
+}
+
+.item5 {
+    grid-column: 1 / span 2; /* занимает две колонки */
+    grid-row: 3; /* расположен в третьей строке */
+}
+
+
+.image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-color: rgba(22,22,22,0.7);
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.one {
+    background-color: #988952;
+    width: 40px;
+    height: 5%;
+    text-align: center;
+    align-content: center;
+    color: #333;
+}
+
+.two {
+    background-color: #fff;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    color: #333;
+}
+
+.three {
+    background-color: #988952;
+    width: 40px;
+    height: 10%;
+    text-align: center;
+    align-content: center;
+    color: #333;
+}
+
+.label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #DDD8C4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    padding: 20px;
+    background-color: #DDD8C4;
+    width: 100%;
+}
+
+.logo h1 {
+    text-decoration: underline;
+    font-size: calc(1em + 5vw);
+    color: #333;
+    text-transform: uppercase;
+}
+
+.logo p {
+    color: #333;
+    font-size: calc(0.5em + 0.5vw);
+}
+
+
+hr {
+    border-top: 2px solid #555;
+    width: 50%;
+}
+
+
+.name {
+    text-align: right;
+}
+
+.name p {
+    font-size: calc(2em + 0.5vw);
+    color: #333;
+}
+
+
+ul {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    text-transform: uppercase;
+
+}
+
+ul li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul li + li:before {
+    padding: 8px;
+    color: #988952;
+    content: "/\00a0";
+}
+
+ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #756938;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th {
+    background-color: #756938;
+    font-weight: bold;
+    color: #fff;
+}
